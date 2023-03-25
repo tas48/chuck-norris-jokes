@@ -1,0 +1,60 @@
+@import url(config.css);
+
+.joke-wrapper{
+  background-color: var(--primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card{
+  background-color: var(--secondary);
+  width: 40vw;
+  height: 36vh;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6vh;
+}
+
+.img-bg{
+  height: 12rem;
+  width: 12rem;
+  border-radius: 50%;
+  background-color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -150px;
+}
+
+.img-bg > img{
+  width: 98%;
+  height: 98%;
+}
+
+.joke-text{
+  margin-inline: 2vw;
+  color: #f2f2f2;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.btn-wrapper{
+  margin-top: 4vh;
+  width: 16vw;
+  height: 6vh;
+  background-color: var(--accent);
+  text-align: center;
+  border-radius: 20px;
+}
+
+.another-joke-btn{
+  outline: transparent;
+  background-color: transparent;
+  color: #f2f2f2;
+  font-size: 1.4rem;
+}

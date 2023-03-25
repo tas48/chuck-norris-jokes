@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');
+
+:root{
+  --primary: #16151A;
+  --secondary: #1D1C23;
+  --accent: #bda243;
+}
+
+html{
+  font-family: 'Lexend', sans-serif;
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+main{
+  width: 100vw;
+  height: 100vh;
+}
