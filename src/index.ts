@@ -1,9 +1,7 @@
 const url:string = "https://api.chucknorris.io/jokes/random";
 const paragraph:any = document.querySelector(".joke-text");
-const button =document.querySelector(".another-joke-btn");
 
-
-async function getJoke(): Promise<string>{
+async function getJoke(): Promise<void>{
 
   let response = await fetch(url);
   let data = await response.json();
@@ -11,7 +9,7 @@ async function getJoke(): Promise<string>{
   try {
     
     if(response.status != 200){
-      throw new Error("Cannot get any response");
+      throw new Error("Cannot get any response from server");
     }
     
   } catch (error)
@@ -21,13 +19,6 @@ async function getJoke(): Promise<string>{
 
   paragraph.textContent = `"${data.value}"`;
 
-}
-
-
-function getNewJoke(){
-  button?.addEventListener('click', () =>{
-    getJoke();
-  });
 }
 
 getJoke();

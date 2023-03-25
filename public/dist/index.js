@@ -10,25 +10,19 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 const url = "https://api.chucknorris.io/jokes/random";
 const paragraph = document.querySelector(".joke-text");
-const button = document.querySelector(".another-joke-btn");
 function getJoke() {
     return __awaiter(this, void 0, void 0, function* () {
         let response = yield fetch(url);
         let data = yield response.json();
         try {
             if (response.status != 200) {
-                throw new Error("Cannot get any response");
+                throw new Error("Cannot get any response from server");
             }
         }
         catch (error) {
             console.log(error);
         }
         paragraph.textContent = `"${data.value}"`;
-    });
-}
-function getNewJoke() {
-    button === null || button === void 0 ? void 0 : button.addEventListener('click', () => {
-        getJoke();
     });
 }
 getJoke();
